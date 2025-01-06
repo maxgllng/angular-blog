@@ -1,12 +1,30 @@
 .header-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+app-navbar {
+  flex-grow: 1;
+  display: flex;
   justify-content: center;
+}
+
+img {
+  margin-right: 40px;
+  cursor: pointer;
 }
 
 button {
   display: flex;
-  justify-content: end;
-  justify-self: end;
   align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 20px;
+  background-color: white;
+  color: red;
+  border: none; 
+  cursor: pointer; 
 }
