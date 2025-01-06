@@ -10,6 +10,8 @@ import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
 import { BlogUserComponent } from './pages/blog-user/blog-user.component';
 import { BlogAdminComponent } from './pages/blog-admin/blog-admin.component';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CreatePostComponent } from './pages/create-post/create-post.component';
     HomeAdminComponent,
     BlogUserComponent,
     BlogAdminComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

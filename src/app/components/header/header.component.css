@@ -1,0 +1,12 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  justify-content: end;
+  justify-self: end;
+  align-items: center;
+}
