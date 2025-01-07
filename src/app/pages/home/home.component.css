@@ -8,15 +8,20 @@
 
 article img {
   border-radius: 20px;
+  width: 375px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .home-wrapper h2 {
-  margin-left: 250px;
+  margin-top: 100px;
+  margin-left: 280px;
   font-size: 32px;
   color: white;
 }
 
 .card-wrapper h3 {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +31,13 @@ article img {
   height: 80px;
   background-color: #841414;
   border-radius: 20px;
+}
+
+.card-post:nth-child(2) {
+  display: grid;
+  grid-template-rows: 19.5% 1fr;
+}
+
+.card-post:nth-child(2) h3 {
+  grid-row-start: 1;
 }

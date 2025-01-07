@@ -1,0 +1,20 @@
+<h1>Blog Posts</h1>
+
+<!-- Lista över inlägg -->
+<div *ngFor="let post of blogPosts" class="blog-post">
+  <h2>{{ post.title }}</h2>
+  <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
+  <p>{{ post.body }}</p>
+  <p><strong>Created on:</strong> {{ post.creationDate | date }}</p>
+  <p>
+    <strong>Likes:</strong> {{ post.likes }} | <strong>Dislikes:</strong>
+    {{ post.dislikes }}
+  </p>
+  <h4>Comments:</h4>
+  <ul>
+    <li *ngFor="let comment of post.comments">{{ comment }}</li>
+  </ul>
+</div>
+
+<!-- Knapp för att lägga till ett nytt inlägg -->
+<button (click)="addNewPost()">Add New Post</button>
