@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf")
+    format("opentype");
+}
 
 * {
   background-color: #d2122e;
+  font-family: "inter";
+  font-weight: 600;
 }
