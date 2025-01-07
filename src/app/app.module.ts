@@ -18,13 +18,10 @@ import { BlogComponent } from './pages/blog/blog.component';
     HeaderComponent,
     AboutComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
