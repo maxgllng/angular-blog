@@ -12,6 +12,9 @@ import { BlogAdminComponent } from './pages/blog-admin/blog-admin.component';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './pages/about/about.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HeaderComponent } from './components/header/header.component';
     BlogAdminComponent,
     CreatePostComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    HomeComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
