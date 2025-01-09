@@ -1,7 +1,9 @@
 <div class="blog-wrapper">
   <section class="post-wrapper">
     <article *ngFor="let post of blogPosts" class="card-post">
-      <p class="post-date">{{ post.creationDate }}</p>
+      <p class="post-date">
+        {{ post.creationDate.toISOString().slice(0, 10) }}
+      </p>
       <h2 class="post-title">{{ post.title }}</h2>
       <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="post-img" />
       <p class="post-body">{{ post.body }}</p>
