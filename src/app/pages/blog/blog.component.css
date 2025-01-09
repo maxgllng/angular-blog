@@ -1,0 +1,23 @@
+* {
+  color: white;
+}
+
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.post-img {
+  width: 460px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.post-icons {
+  display: flex;
+  gap: 5rem;
+  border-top: 2px solid white;
+  
+}

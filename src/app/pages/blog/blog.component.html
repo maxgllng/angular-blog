@@ -1,1 +1,18 @@
-<p>blog works!</p>
+<div class="blog-wrapper">
+  <section class="post-wrapper">
+    <article *ngFor="let post of blogPosts" class="card-post">
+      <p class="post-date">{{ post.creationDate }}</p>
+      <h2 class="post-title">{{ post.title }}</h2>
+      <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="post-img" />
+      <p class="post-body">{{ post.body }}</p>
+      <div class="post-icons">
+        <p>{{ post.likes }}</p>
+        <img [src]="likeImg" alt="like-icon" />
+        <p>{{ post.dislikes }}</p>
+        <img [src]="dislikeImg" alt="dislike-icon" />
+        <p>{{ post.comments.length }}</p>
+        <img [src]="commentsImg" alt="comments-icon" />
+      </div>
+    </article>
+  </section>
+</div>

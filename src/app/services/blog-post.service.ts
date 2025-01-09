@@ -10,7 +10,21 @@ export class BlogPostService {
     new BlogPost(
       'bittersweet',
       'skyli4.jpg',
-      'This is my first blog post! Stay tuned for more updates.',
+      `Did something cross your mind?
+Cause I can see it in your eyes
+You wonder why
+I didn't wanna shut you out
+But I was bleeding every time
+You came around
+
+Of all of the things I've said and done
+I still remember
+Every single dream
+It's fading to whatever
+But all of my demons helped me out
+Said 'you don't need it
+Cause you're not that weak
+And nothing lasts forever`,
       new Date('2023-12-01'),
       10,
       2,
