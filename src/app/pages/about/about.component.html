@@ -1,1 +1,20 @@
-<p>about works!</p>
+<div class="about-wrapper">
+  <img [src]="imagePath" alt="Sky Li" />
+  <p>
+    hi, i’m sky li – welcome! i’m so glad you’ve found your way here. this is
+    where i share all my lyrics, and i’d love to hear your thoughts. feel free
+    to leave a comment! x /sky li
+  </p>
+  <form [formGroup]="applyForm">
+    <label for="first-name">name</label>
+    <input id="first-name" type="text" formControlName="firstName" />
+
+    <label for="email">email</label>
+    <input id="email" type="email" formControlName="email" />
+
+    <label for="message">message</label>
+    <input id="message" type="text" formControlName="message" />
+
+    <button type="submit">submit</button>
+  </form>
+</div>
