@@ -1,7 +1,17 @@
 <header>
   <div class="header-wrapper">
     <app-navbar></app-navbar>
-    <img [src]="imgPath" />
-    <button>user mode</button>
+
+    <!-- Bild visas endast i admin-läge -->
+    <img
+      *ngIf="isAdminMode"
+      [src]="imgPath"
+      alt="create-post"
+      routerLink="create-post"
+    />
+
+    <button class="mode-btn" (click)="toggleMode()">
+      {{ isAdminMode ? "user mode" : "admin mode" }}
+    </button>
   </div>
 </header>

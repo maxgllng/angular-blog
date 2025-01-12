@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   imgPath: string = 'create.png';
+  isAdminMode = false;
+
+  toggleMode() {
+    this.isAdminMode = !this.isAdminMode; //Växla mellan user och admin
+  }
 }

@@ -23,8 +23,9 @@ button {
   justify-content: center;
   height: 50px;
   border-radius: 20px;
+  width: 100px;
   background-color: white;
   color: red;
-  border: none; 
-  cursor: pointer; 
+  border: none;
+  cursor: pointer;
 }
