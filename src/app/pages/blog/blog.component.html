@@ -1,20 +1,40 @@
-<div class="blog-wrapper">
-  <section class="post-wrapper">
-    <article *ngFor="let post of blogPosts" class="card-post">
-      <p class="post-date">
-        {{ post.creationDate.toISOString().slice(0, 10) }}
-      </p>
-      <h2 class="post-title">{{ post.title }}</h2>
+<section class="post-wrapper">
+  <article *ngFor="let post of blogPosts" class="card-post">
+    <p class="post-date">
+      {{ post.creationDate.toISOString().slice(0, 10) }}
+    </p>
+    <h2 class="post-title">{{ post.title }}</h2>
+    <div class="post-content">
       <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="post-img" />
-      <p class="post-body">{{ post.body }}</p>
-      <div class="post-icons">
+
+      <!-- Iterera över varje rad i body och visa som separata <p> -->
+      <div class="post-body">
+        <p *ngFor="let line of splitBodyText(post.body)">
+          {{ line }}
+        </p>
+      </div>
+    </div>
+
+    <div class="post-icons">
+      <div class="likes-wrapper">
         <p>{{ post.likes }}</p>
         <img [src]="likeImg" alt="like-icon" />
+      </div>
+      <div class="dislikes-wrapper">
         <p>{{ post.dislikes }}</p>
         <img [src]="dislikeImg" alt="dislike-icon" />
+      </div>
+      <div class="comments-wrapper">
         <p>{{ post.comments.length }}</p>
         <img [src]="commentsImg" alt="comments-icon" />
       </div>
-    </article>
-  </section>
-</div>
+      <p>add comment</p>
+    </div>
+    <p class="comments-title">comments</p>
+
+    <!-- Iterera över comments -->
+    <div *ngFor="let comment of post.comments" class="comment-wrapper">
+      <p class="comment-text">{{ comment }}</p>
+    </div>
+  </article>
+</section>

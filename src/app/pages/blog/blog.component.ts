@@ -21,4 +21,8 @@ export class BlogComponent implements OnInit {
     // Hämta alla blogg-inlägg från tjänsten
     this.blogPosts = this.blogPostService.getBlogPosts();
   }
+
+  splitBodyText(postBody: string): string[] {
+    return postBody.split('\n').filter((line) => line.trim().length > 0);
+  }
 }
