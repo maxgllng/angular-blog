@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,13 @@ export class HeaderComponent {
   imgPath: string = 'create.png';
   isAdminMode = false;
 
+  constructor(private router: Router) {}
+
   toggleMode() {
     this.isAdminMode = !this.isAdminMode; //Växla mellan user och admin
+
+    if (!this.isAdminMode && this.router.url === '/create-post') {
+      this.router.navigate(['/']);
+    }
   }
 }
