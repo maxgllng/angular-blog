@@ -37,6 +37,11 @@ export class BlogComponent implements OnInit {
     return postBody.split('\n').filter((line) => line.trim().length > 0);
   }
 
+  addLike(post: BlogPost): void {
+    post.addLike(); // Anropa addLike-metoden på det specifika inlägget
+    this.blogPostService.updateBlogPost(post); // Uppdatera inlägget i localStorage eller tjänsten
+  }
+
   deletePost(post: BlogPost): void {
     const confirmDelete = window.confirm(
       `Are you sure you want to delete the post titled "${post.title}"?`

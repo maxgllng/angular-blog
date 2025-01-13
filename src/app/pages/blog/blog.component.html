@@ -17,7 +17,7 @@
     <div class="post-icons">
       <div class="likes-wrapper">
         <p>{{ post.likes }}</p>
-        <img [src]="likeImg" alt="like-icon" />
+        <img [src]="likeImg" alt="like-icon" (click)="addLike(post)" />
       </div>
       <div class="dislikes-wrapper">
         <p>{{ post.dislikes }}</p>
