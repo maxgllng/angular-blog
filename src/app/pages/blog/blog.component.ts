@@ -42,6 +42,11 @@ export class BlogComponent implements OnInit {
     this.blogPostService.updateBlogPost(post); // Uppdatera inlägget i localStorage eller tjänsten
   }
 
+  addDislike(post: BlogPost): void {
+    post.addDislike(); //Anropa addDislike-metoden på det specifika inlägget
+    this.blogPostService.updateBlogPost(post); // Uppdatera inlägget i localStorage eller tjänsten
+  }
+
   deletePost(post: BlogPost): void {
     const confirmDelete = window.confirm(
       `Are you sure you want to delete the post titled "${post.title}"?`

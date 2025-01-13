@@ -58,6 +58,10 @@
   border-top: 2px solid white;
 }
 
+.post-icons img {
+  cursor: pointer;
+}
+
 .likes-wrapper,
 .dislikes-wrapper,
 .comments-wrapper,

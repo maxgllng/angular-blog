@@ -21,7 +21,7 @@
       </div>
       <div class="dislikes-wrapper">
         <p>{{ post.dislikes }}</p>
-        <img [src]="dislikeImg" alt="dislike-icon" />
+        <img [src]="dislikeImg" alt="dislike-icon" (click)="addDislike(post)" />
       </div>
       <div class="comments-wrapper">
         <p>{{ post.comments.length }}</p>
