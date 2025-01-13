@@ -1,1 +1,12 @@
-<p>create-post works!</p>
+<form [formGroup]="newPost">
+  <label for="title">title</label>
+  <input id="title" type="text" formControlName="title" />
+
+  <label for="imgUrl">image url</label>
+  <input id="imgUrl" type="text" formControlName="imgUrl" />
+
+  <label for="body">body</label>
+  <input id="body" type="text" formControlName="body" />
+
+  <button type="submit">submit post</button>
+</form>

@@ -1,0 +1,39 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 1176px;
+  height: 909px;
+  border-radius: 20px;
+  background-color: #f2eeee;
+  padding: 2rem;
+}
+
+label {
+  background-color: #f2eeee;
+  color: #d2122e;
+  margin-left: 5%;
+}
+
+input {
+  margin: auto;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 90%;
+  height: 5%;
+}
+
+#body {
+  height: 50%;
+}
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #d2122e;
+  border-radius: 20px;
+  height: 8%;
+  width: 15%;
+  margin: auto;
+}
