@@ -1,4 +1,4 @@
-<form [formGroup]="newPost">
+<form [formGroup]="newPost" (ngSubmit)="onSubmit()">
   <label for="title">title</label>
   <input id="title" type="text" formControlName="title" />
 

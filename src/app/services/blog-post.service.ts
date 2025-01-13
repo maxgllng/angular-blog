@@ -78,13 +78,42 @@ And nothing lasts forever`,
     ),
   ];
 
+  constructor() {
+    this.loadPostsFromLocalStorage();
+  }
+
   // Hämta alla blogg-inlägg
   getBlogPosts(): BlogPost[] {
     return this.blogPosts;
   }
 
-  // Lägg till ett nytt inlägg
+  // Lägg till ett nytt inlägg och spara till local storage
   addBlogPost(post: BlogPost): void {
     this.blogPosts.push(post);
+    this.savePostsToLocalStorage();
+  }
+
+  // Ladda inlägg från local storage
+  private loadPostsFromLocalStorage(): void {
+    const storedPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+    if (storedPosts.length > 0) {
+      this.blogPosts = storedPosts.map(
+        (post: any) =>
+          new BlogPost(
+            post.title,
+            post.thumbnailUrl,
+            post.body,
+            new Date(post.creationDate),
+            post.likes,
+            post.dislikes,
+            post.comments
+          )
+      );
+    }
+  }
+
+  // Spara inlägg till local storage
+  private savePostsToLocalStorage(): void {
+    localStorage.setItem('blogPosts', JSON.stringify(this.blogPosts));
   }
 }
