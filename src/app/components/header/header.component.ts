@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModeService } from '../../services/mode.service';
 
 @Component({
   selector: 'app-header',
@@ -10,15 +11,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   imgPath: string = 'create.png';
-  isAdminMode = false;
+  isAdmin: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private modeService: ModeService) {
+    // Lyssna på förändringar av admin-status
+    this.modeService.isAdmin$.subscribe((adminMode) => {
+      this.isAdmin = adminMode;
+    });
+  }
 
-  toggleMode() {
-    this.isAdminMode = !this.isAdminMode; //Växla mellan user och admin
-
-    if (!this.isAdminMode && this.router.url === '/create-post') {
-      this.router.navigate(['/']);
-    }
+  toggleMode(): void {
+    this.modeService.toggleMode();
   }
 }

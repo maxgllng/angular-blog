@@ -112,6 +112,14 @@ And nothing lasts forever`,
     }
   }
 
+  removeBlogPost(title: string): void {
+    // Filtrera bort inlägget från listan
+    this.blogPosts = this.blogPosts.filter((post) => post.title !== title);
+
+    // Uppdatera localStorage
+    localStorage.setItem('blogPosts', JSON.stringify(this.blogPosts));
+  }
+
   // Spara inlägg till local storage
   private savePostsToLocalStorage(): void {
     localStorage.setItem('blogPosts', JSON.stringify(this.blogPosts));

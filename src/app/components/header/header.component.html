@@ -4,14 +4,14 @@
 
     <!-- Bild visas endast i admin-läge -->
     <img
-      *ngIf="isAdminMode"
+      *ngIf="isAdmin"
       [src]="imgPath"
       alt="create-post"
       routerLink="create-post"
     />
 
     <button class="mode-btn" (click)="toggleMode()">
-      {{ isAdminMode ? "user mode" : "admin mode" }}
+      {{ isAdmin ? "user mode" : "admin mode" }}
     </button>
   </div>
 </header>

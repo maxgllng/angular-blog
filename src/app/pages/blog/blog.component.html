@@ -7,7 +7,6 @@
     <div class="post-content">
       <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="post-img" />
 
-      <!-- Iterera över varje rad i body och visa som separata <p> -->
       <div class="post-body">
         <p *ngFor="let line of splitBodyText(post.body)">
           {{ line }}
@@ -32,9 +31,12 @@
     </div>
     <p class="comments-title">comments</p>
 
-    <!-- Iterera över comments -->
     <div *ngFor="let comment of post.comments" class="comment-wrapper">
       <p class="comment-text">{{ comment }}</p>
     </div>
+
+    <!-- Lägg till en "Delete Post"-knapp, endast synlig i admin-mode -->
+    <button *ngIf="adminMode" (click)="deletePost(post)">Delete Post</button>
   </article>
 </section>
+
