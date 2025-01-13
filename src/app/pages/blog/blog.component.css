@@ -60,9 +60,14 @@
 
 .likes-wrapper,
 .dislikes-wrapper,
-.comments-wrapper {
+.comments-wrapper,
+.delete-wrapper {
   display: flex;
   gap: 10px;
+}
+
+.delete-btn {
+  height: 90%;
 }
 
 .comments-title {

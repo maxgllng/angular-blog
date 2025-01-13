@@ -8,12 +8,13 @@ import { ModeService } from '../../services/mode.service';
   standalone: false,
 
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css' 
+  styleUrl: './blog.component.css',
 })
 export class BlogComponent implements OnInit {
   commentsImg: string = '/comments.png';
   dislikeImg: string = '/dislike.png';
   likeImg: string = '/like.png';
+  deleteImg: string = '/delete.png';
   blogPosts: BlogPost[] = [];
   adminMode: boolean = false; // Initialt i användarläge
 
@@ -37,10 +38,16 @@ export class BlogComponent implements OnInit {
   }
 
   deletePost(post: BlogPost): void {
-    // Ta bort inlägg från tjänsten och localStorage
-    this.blogPostService.removeBlogPost(post.title);
+    const confirmDelete = window.confirm(
+      `Are you sure you want to delete the post titled "${post.title}"?`
+    );
 
-    // Uppdatera listan med inlägg
-    this.blogPosts = this.blogPostService.getBlogPosts();
+    if (confirmDelete) {
+      // Ta bort inlägg från tjänsten och localStorage
+      this.blogPostService.removeBlogPost(post.title);
+
+      // Uppdatera listan med inlägg
+      this.blogPosts = this.blogPostService.getBlogPosts();
+    }
   }
 }

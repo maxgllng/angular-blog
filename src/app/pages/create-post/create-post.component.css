@@ -15,6 +15,15 @@ label {
   margin-left: 5%;
 }
 
+textarea {
+  width: 90%;
+  background-color: white;
+  margin-left: 5%;
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+}
+
 input {
   margin: auto;
   background-color: white;
@@ -27,6 +36,7 @@ input {
 #body {
   height: 50%;
 }
+
 button {
   cursor: pointer;
   border: none;

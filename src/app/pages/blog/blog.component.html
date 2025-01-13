@@ -27,16 +27,21 @@
         <p>{{ post.comments.length }}</p>
         <img [src]="commentsImg" alt="comments-icon" />
       </div>
-      <p>add comment</p>
+      <div class="delete-wrapper">
+        <img
+          [src]="deleteImg"
+          alt="delete-icon"
+          *ngIf="adminMode"
+          (click)="deletePost(post)"
+          class="delete-btn"
+        />
+      </div>
     </div>
     <p class="comments-title">comments</p>
+    <p>add comment</p>
 
     <div *ngFor="let comment of post.comments" class="comment-wrapper">
       <p class="comment-text">{{ comment }}</p>
     </div>
-
-    <!-- Lägg till en "Delete Post"-knapp, endast synlig i admin-mode -->
-    <button *ngIf="adminMode" (click)="deletePost(post)">Delete Post</button>
   </article>
 </section>
-
