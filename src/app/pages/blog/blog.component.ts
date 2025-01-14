@@ -32,6 +32,13 @@ export class BlogComponent implements OnInit {
     // Hämta alla blogg-inlägg från tjänsten
     this.blogPosts = this.blogPostService.getBlogPosts();
 
+    // Sortera inläggen efter datum
+
+    this.blogPosts.sort(
+      (a, b) =>
+        new Date(b.creationDate).getTime() - new Date(a.creationDate).getTime()
+    );
+
     // Lyssna på förändringar av admin-läget
     this.modeService.isAdmin$.subscribe((isAdmin) => {
       this.adminMode = isAdmin;
