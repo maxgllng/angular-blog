@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogPostService } from '../../services/blog-post.service';
 import { BlogPost } from '../../models/blog-post';
 import { ModeService } from '../../services/mode.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
@@ -11,6 +12,10 @@ import { ModeService } from '../../services/mode.service';
   styleUrl: './blog.component.css',
 })
 export class BlogComponent implements OnInit {
+  newComment = new FormGroup({
+    addComment: new FormControl(''),
+  });
+
   commentsImg: string = '/comments.png';
   dislikeImg: string = '/dislike.png';
   likeImg: string = '/like.png';

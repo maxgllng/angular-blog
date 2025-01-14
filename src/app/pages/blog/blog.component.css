@@ -74,12 +74,15 @@
   height: 90%;
 }
 
-.comments-title {
+.comments-btn {
+  cursor: pointer;
+  border: none;
   background-color: #841414;
   color: white;
-  width: fit-content;
+  height: 3.16rem;
   padding: 1rem;
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .comment-wrapper {
@@ -97,4 +100,20 @@
   background-color: #f2eeee;
   color: black;
   font-weight: 500;
+}
+
+.add-comment-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+#add-comment {
+  background-color: white;
+  height: 3rem;
+  width: 1100px;
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: black;
 }
