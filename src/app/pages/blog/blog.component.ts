@@ -65,4 +65,14 @@ export class BlogComponent implements OnInit {
       this.blogPosts = this.blogPostService.getBlogPosts();
     }
   }
+
+  addComment(post: BlogPost): void {
+    const newComment = this.newComment.get('addComment')?.value?.trim();
+    if (newComment) {
+      post.comments.push(newComment); // Lägg till kommentaren till inlägget
+      this.blogPostService.updateBlogPost(post); // Uppdatera inlägget i localStorage
+      this.blogPosts = this.blogPostService.getBlogPosts(); // Uppdatera komponentens array
+      this.newComment.reset(); // Rensa input-fältet
+    }
+  }
 }

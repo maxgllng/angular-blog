@@ -42,9 +42,13 @@
       <p class="comment-text">{{ comment }}</p>
     </div>
     <div class="add-comment-wrapper">
-      <form>
-        <!-- <label for="add comment" id="label-comment">add comment</label> -->
-        <input type="text" id="add-comment" formControlName="addComment" />
+      <form [formGroup]="newComment" (ngSubmit)="addComment(post)">
+        <input
+          type="text"
+          id="add-comment"
+          formControlName="addComment"
+          placeholder="let me know what you think..."
+        />
         <button type="submit" class="comments-btn">add comment</button>
       </form>
     </div>

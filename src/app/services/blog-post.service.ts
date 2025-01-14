@@ -126,13 +126,12 @@ And nothing lasts forever`,
   }
 
   updateBlogPost(updatedPost: BlogPost): void {
-    // Hitta och uppdatera det specifika inlägget i blogPosts-arrayen
     const index = this.blogPosts.findIndex(
       (post) => post.title === updatedPost.title
     );
     if (index !== -1) {
-      this.blogPosts[index] = updatedPost;
-      this.savePostsToLocalStorage(); // Spara uppdaterade inlägg i localStorage
+      this.blogPosts[index] = updatedPost; // Uppdatera arrayen
+      this.savePostsToLocalStorage(); // Spara i localStorage
     }
   }
 }

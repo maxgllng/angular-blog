@@ -79,8 +79,8 @@
   border: none;
   background-color: #841414;
   color: white;
-  height: 3.16rem;
-  padding: 1rem;
+  height: 4.1rem;
+  padding: 1.5rem;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -116,4 +116,5 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   color: black;
+  padding: 0.5rem;
 }
