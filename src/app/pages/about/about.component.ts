@@ -15,4 +15,13 @@ export class AboutComponent {
     message: new FormControl(''),
     email: new FormControl(''),
   });
+
+  onSubmit(): void {
+    const firstName = this.applyForm.get('firstName')?.value;
+    const email = this.applyForm.get('email')?.value;
+
+    console.log(
+      `Hi ${firstName}, thanks for contacting me! I will get back to you on ${email} as soon as possible. x /sky li`
+    );
+  }
 }

@@ -6,15 +6,15 @@
     to leave a comment! x /sky li
   </p>
 
-  <form [formGroup]="applyForm">
-    <label for="first-name">title</label>
+  <form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">name</label>
     <input id="first-name" type="text" formControlName="firstName" />
 
     <label for="email">email</label>
     <input id="email" type="email" formControlName="email" />
 
     <label for="message">message</label>
-    <input id="message" type="text" formControlName="message" />
+    <textarea id="message" type="text" formControlName="message"></textarea>
 
     <button type="submit">submit</button>
   </form>

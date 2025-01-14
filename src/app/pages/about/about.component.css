@@ -41,7 +41,7 @@ form {
   background-color: #f2eeee;
   gap: 10px;
   width: 650px;
-  height: 468px;
+  height: 520px;
 }
 
 form label {
@@ -55,10 +55,16 @@ form input {
   background: white;
   border-radius: 20px;
   height: 2rem;
+  padding: 0.5rem;
 }
 
 #message {
   height: 14rem;
+  padding: 0.5rem;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  color: black;
 }
 
 button {
