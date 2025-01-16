@@ -40,6 +40,6 @@ article img {
   grid-template-rows: 19.5% 1fr;
 }
 
-.card-post:nth-child(odd) h3 {
+.card-post:nth-child(odd) h3, a {
   grid-row-start: 1;
 }

@@ -1,10 +1,11 @@
 <div class="home-wrapper">
-  <h2>all posts...</h2>
+  <h2>recent posts</h2>
   <section class="card-wrapper">
     <article *ngFor="let post of blogPosts" class="card-post">
-      <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
-      <h3>{{ post.title }}</h3>
+      <a [routerLink]="['/post', post.title]">
+        <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
+        <h3>{{ post.title }}</h3>
+      </a>
     </article>
   </section>
 </div>
-

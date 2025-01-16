@@ -1,5 +1,6 @@
+<button (click)="goToBlogPage()">View all posts</button>
 <section class="post-wrapper">
-  <article *ngFor="let post of blogPosts" class="card-post">
+  <article *ngIf="post" class="card-post">
     <p class="post-date">
       {{ post.creationDate.toISOString().slice(0, 10) }}
     </p>
@@ -27,15 +28,6 @@
         <p>{{ post.comments.length }}</p>
         <img [src]="commentsImg" alt="comments-icon" />
       </div>
-      <div class="delete-wrapper">
-        <img
-          [src]="deleteImg"
-          alt="delete-icon"
-          *ngIf="adminMode"
-          (click)="deletePost(post)"
-          class="delete-btn"
-        />
-      </div>
     </div>
 
     <ul *ngFor="let comment of post.comments" class="comment-wrapper">
@@ -49,7 +41,7 @@
           formControlName="addComment"
           placeholder="let me know what you think..."
         />
-        <button type="submit" class="comments-btn">add comment</button>
+        <button type="submit" class="comments-btn">Add comment</button>
       </form>
     </div>
   </article>

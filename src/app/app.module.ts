@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SinglePostComponent } from './pages/single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     BlogComponent,
     BlogPostComponent,
+    SinglePostComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
