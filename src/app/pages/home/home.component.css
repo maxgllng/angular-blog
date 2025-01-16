@@ -35,11 +35,16 @@ article img {
   border-radius: 20px;
 }
 
-.card-post:nth-child(odd) {
+.card-post-link:nth-child(odd) {
   display: grid;
   grid-template-rows: 19.5% 1fr;
 }
 
-.card-post:nth-child(odd) h3, a {
+.card-post-link:nth-child(odd) h3 {
   grid-row-start: 1;
 }
+
+a {
+  text-decoration: none;
+}
+

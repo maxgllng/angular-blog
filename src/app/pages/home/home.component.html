@@ -2,7 +2,7 @@
   <h2>recent posts</h2>
   <section class="card-wrapper">
     <article *ngFor="let post of blogPosts" class="card-post">
-      <a [routerLink]="['/post', post.title]">
+      <a [routerLink]="['/post', post.title]" class="card-post-link">
         <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
         <h3>{{ post.title }}</h3>
       </a>
