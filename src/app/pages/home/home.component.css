@@ -1,9 +1,8 @@
 .card-wrapper {
   display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-justify-self: center;
-gap: 2rem;
-  
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
+  gap: 2rem;
   margin-top: 100px;
 }
 
@@ -33,15 +32,6 @@ article img {
   height: 80px;
   background-color: #841414;
   border-radius: 20px;
-}
-
-.card-post-link:nth-child(odd) {
-  display: grid;
-  grid-template-rows: 19.5% 1fr;
-}
-
-.card-post-link:nth-child(odd) h3 {
-  grid-row-start: 1;
 }
 
 a {
